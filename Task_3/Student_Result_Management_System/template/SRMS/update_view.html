@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <style>
+       .cla{
+            border:3px solid rgba(63, 238, 63,0.7);
+}
+       .gap{
+          margin-bottom: 1%;
+       }
+       .btn:hover{
+    border: 3px solid rgba(17, 148, 17,0.8); 
+         }
+    </style>
+</head>    
+<body>
+    <nav class="navbar">
+        <h1>Student Result Management System</h1>
+        <p>
+            <a href="/accounts/logout">Logout</a>
+        </p>
+    </nav>
+    <div class="container d2 table1 textfield">
+    <h1>Student Result Update Form</h1>
+    <form method='POST'>
+        Full Name: <input type="text" class="gap" name="Full_Name" value="{{Studentinfo.Full_Name}}" id="">        
+        Mother Name: <input type="text" name="Mother_Name" value="{{Studentinfo.Mother_Name}}" id="">
+        <br>
+        PRN No.: <input type="text" name="PRN_No" value="{{Studentinfo.PRN_No}}" id="">        
+        Contact Number : <input type="text" name="Contact_Number" value="{{Studentinfo.Contact_Number}}" id="">
+        <br> <br>
+        <table >
+            <thead>
+                <th>Subject Name</th>
+                <th>Obtained Marks</th>
+                <th>Maximum Marks</th>
+            </thead> 
+            <tr>
+               <td><input type="text" name="Subject_Name_1" value="{{Studentinfo.Subject_Name_1}}" id=""></td>
+               <td><input type="text" name="Obtained_Marks_1" value="{{Studentinfo.Obtained_Marks_1}}" id=""></td>
+               <td><input type="text" name="Maximum_Marks_1" value="{{Studentinfo.Maximum_Marks_1}}" id=""></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="Subject_Name_2" value="{{Studentinfo.Subject_Name_2}}" id=""></td>
+                <td><input type="text" name="Obtained_Marks_2" value="{{Studentinfo.Obtained_Marks_2}}" id=""></td>
+                <td><input type="text" name="Maximum_Marks_2" value="{{Studentinfo.Maximum_Marks_2}}" id=""></td>
+             </tr>
+             <tr>
+                <td><input type="text" name="Subject_Name_3" value="{{Studentinfo.Subject_Name_3}}" id=""></td>
+                <td><input type="text" name="Obtained_Marks_3" value="{{Studentinfo.Obtained_Marks_3}}" id=""></td>
+                <td><input type="text" name="Maximum_Marks_3" value="{{Studentinfo.Maximum_Marks_3}}" id=""></td>
+             </tr>
+             <tr>
+                <td><input type="text" name="Subject_Name_4" value="{{Studentinfo.Subject_Name_4}}" id=""></td>
+                <td><input type="text" name="Obtained_Marks_4" value="{{Studentinfo.Obtained_Marks_4}}" id=""></td>
+                <td><input type="text" name="Maximum_Marks_4" value="{{Studentinfo.Maximum_Marks_4}}" id=""></td>
+             </tr>
+             <tr>
+                <td><input type="text" name="Subject_Name_5" value="{{Studentinfo.Subject_Name_5}}" id=""></td>
+                <td><input type="text" name="Obtained_Marks_5" value="{{Studentinfo.Obtained_Marks_5}}" id=""></td>
+                <td><input type="text" name="Maximum_Marks_5" value="{{Studentinfo.Maximum_Marks_5}}" id=""></td>
+             </tr>
+             <tr>
+                <td><input type="text" name="Subject_Name_6" value="{{Studentinfo.Subject_Name_6}}" id=""></td>
+                <td><input type="text" name="Obtained_Marks_6" value="{{Studentinfo.Obtained_Marks_6}}" id=""></td>
+                <td><input type="text" name="Maximum_Marks_6" value="{{Studentinfo.Maximum_Marks_6}}" id=""></td>
+             </tr>
+             <tr>
+                <td><input type="text" name="Subject_Name_7" value="{{Studentinfo.Subject_Name_7}}" id=""></td>
+                <td><input type="text" name="Obtained_Marks_7" value="{{Studentinfo.Obtained_Marks_7}}" id=""></td>
+                <td><input type="text" name="Maximum_Marks_7" value="{{Studentinfo.Maximum_Marks_7}}" id=""></td>
+             </tr>
+             <tr>
+                <td><input type="text" name="Subject_Name_8" value="{{Studentinfo.Subject_Name_8}}" id=""></td>
+                <td><input type="text" name="Obtained_Marks_8" value="{{Studentinfo.Obtained_Marks_8}}" id=""></td>
+                <td><input type="text" name="Maximum_Marks_8" value="{{Studentinfo.Maximum_Marks_8}}" id=""></td>
+             </tr>
+             <tr>
+                <td><input type="text" name="Subject_Name_9" value="{{Studentinfo.Subject_Name_9}}" id=""></td>
+                <td><input type="text" name="Obtained_Marks_9" value="{{Studentinfo.Obtained_Marks_9}}" id=""></td>
+                <td><input type="text" name="Maximum_Marks_9" value="{{Studentinfo.Maximum_Marks_9}}" id=""></td>
+             </tr>
+             <tr>
+                <td><input type="text" name="Subject_Name_10" value="{{Studentinfo.Subject_Name_10}}" id=""></td>
+                <td><input type="text" name="Obtained_Marks_10" value="{{Studentinfo.Obtained_Marks_10}}" id=""></td>
+                <td><input type="text" name="Maximum_Marks_10" value="{{Studentinfo.Maximum_Marks_10}}" id=""></td>
+             </tr>
+             <tr>
+                <td><input type="text" name="Subject_Name_11" value="{{Studentinfo.Subject_Name_11}}" id=""></td>
+                <td><input type="text" name="Obtained_Marks_11" value="{{Studentinfo.Obtained_Marks_11}}" id=""></td>
+                <td><input type="text" name="Maximum_Marks_11" value="{{Studentinfo.Maximum_Marks_11}}" id=""></td>
+             </tr>
+             <tr>
+                <td><input type="text" name="Subject_Name_12" value="{{Studentinfo.Subject_Name_12}}" id=""></td>
+                <td><input type="text" name="Obtained_Marks_12" value="{{Studentinfo.Obtained_Marks_12}}" id=""></td>
+                <td><input type="text" name="Maximum_Marks_12" value="{{Studentinfo.Maximum_Marks_12}}" id=""></td>
+             </tr>  
+            </table >
+                {%csrf_token%}
+           <input  class="btn" type="submit" value="Update Marks">
+            </form> </div>
+        </body>      
+</html>

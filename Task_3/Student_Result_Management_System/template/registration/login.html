@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Student Result Management System</h1>
+        <p>
+            
+            
+        </p>
+    </nav>
+    <div class="login1 container textfield">
+       <h3>Welcome to Login Page</h3>
+<form method="post">
+    <div>
+        {{form.as_p}}
+        {%csrf_token%}
+        <input type="submit" value="SUBMIT">
+
+
+    </div>
+    </div>
+
+
+
+
+
+</form>
+
+</body>
+</html>

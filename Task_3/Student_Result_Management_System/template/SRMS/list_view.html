@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listview</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <style>
+        #automar{
+            position: relative;
+            left: 5%;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar table1">
+        <h3>Student Result Management System</h3>
+        <p>            
+            <a  href="/accounts/logout/">Logout</a>
+        </p>
+    </nav>
+    <div style="padding-top: 1%;  margin-top: 2%; width: 35%;" class="container table1 result2">
+        <h1>LISTVIEW OF STUDENT DATA</h1>   
+        <table id="automar" style=" border-spacing: 10px;">
+            <thead>
+                <th>Full Name</th>
+                <th>PRN No.</th>
+                <th>Mother Name</th>
+                <th>Action-I</th>
+                <th>Action-II</th>
+            </thead>   
+        {%for student in data%}
+            <tr>
+                <td>{{ student.Full_Name }}</td>
+                <td>{{ student.PRN_No }}</td>
+                <td>{{ student.Mother_Name }}</td>
+                <td> <a href="/updateview/{{student.PRN_No}}">Update</a> </td>
+                <td> <a href="/deleteview/{{student.PRN_No}}">Delete</a> </td>
+        </tr>
+            {%endfor%}
+        </table>   <br>
+        <a style="color: black;" class="btn" href="/addstudent">Add New Result</a>       
+    </div>
+</body>
+</html>

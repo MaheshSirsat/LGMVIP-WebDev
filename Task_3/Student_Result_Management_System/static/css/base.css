@@ -1,0 +1,113 @@
+.navbar{
+    padding: 5px;
+    border-radius: 10px;
+    background:rgba(244, 244, 245, 0.4);
+    border:3px solid black;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+.navbar h3{
+    padding: 0% 2%;
+    font-weight: 1100;
+    display: inline-block;
+    text-align: center;
+}
+.cla{
+    border:3px solid rgba(63, 238, 63,0.7);
+}
+.navbar a:hover{
+    background-color:rgba(247, 42, 52,1);
+}
+.navbar a{
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 6px;
+    padding: 3% 12%;   padding-bottom: 5%;
+    color: rgb(8, 8, 8);
+    background: rgba(241, 21, 21,0.6);
+    border:3px solid rgba(247, 42, 52,0.7);
+}
+body{
+    word-wrap: break-word;
+    font-family: 'Ubuntu', sans-serif;
+    background-image:url('pexels-johannes-plenio-1103970.jpg')  ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    background-attachment: fixed;
+    z-index: 1;
+    opacity: 1;
+    width: 99%;
+    height: 100%;
+}
+h1{
+    color: rgb(8, 8, 8);
+}
+.container{
+    word-wrap: break-word;
+    text-decoration:none ;
+    border: 3px solid rgb(17, 15, 15);
+    display: block;
+    padding: 3%;
+    border-radius: 15px;
+    margin: auto;
+    text-align: center;
+    background: rgba(192, 188, 188,0.6);
+}
+.table{
+    word-wrap:unset;
+}
+.table1{
+    border-spacing: 30px;
+    list-style: none;
+}
+
+.table1 td input{
+    width: 90%;
+}
+.result1{
+    width: 27%;
+    margin-top: 10%;
+    padding: 3%;
+}
+.btn:hover{
+    background-color:  rgba(17, 148, 17,0.7); 
+}
+.btn{
+    font-weight: bold;
+    color: rgb(8, 8, 8);
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    border: 3px solid rgba(17, 148, 17,0.8); 
+    background-color:  rgba(17, 148, 17,0.4); 
+}
+.textfield input:hover{
+    border:2px solid rgba(37, 37, 230,0.8);
+    background-color: rgba(6, 6, 240,0.1);
+}
+.textfield input{
+    font-size: 1rem;
+    padding: 1% 3% 1% 3%;
+    border-radius: 3px;
+}
+.result2{
+    margin-top: 4%;
+    width: 50%;
+}
+.login1{
+    width: 25%;
+    margin-top: 10%;
+}
+.d2{
+    width: 50%;
+    padding:1%;
+    margin-top: 1%;
+}
+.d2 table{    
+    margin-left: 8%;
+}
+.d2 input{
+    text-align: center;
+}

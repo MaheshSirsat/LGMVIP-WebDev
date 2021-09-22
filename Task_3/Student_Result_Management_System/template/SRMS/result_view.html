@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <h3>Student Result Management System</h3>
+        <p>
+            {% if Login %}
+            <a href="/accounts/logout/">Logout</a>
+            {% else %}
+            <a href="/accounts/login/">Login</a>
+            {%endif%}
+        </p>
+    </nav>
+    {%if canshow != True %}
+    <div class="container textfield result1">
+        <h1  style="margin-top: 0%;">  &nbsp&nbsp&nbsp&nbsp&nbsp&nbspSEARCH RESULT</h1>
+        <form  method="POST">
+            &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp PRN No.&nbsp; {{form.PRN_No}} <br> <br>
+            Mother Name&nbsp;  {{form.Mother}} <br>
+            {%csrf_token%} <br>
+            <input style="margin-left: 50px;font-weight: lighter;" class="btn" type="submit" value="Show Result" >
+        </form>
+     
+    </div>
+    {%else%}
+    <ul class="  result2 container table1 ">
+        <li class="textfield">Full Name : {{form.Full_Name}}</li> <br>
+        <li class="textfield">PRN No. : {{form.PRN_No}}</li> <br>
+        <li class="textfield">Mother Name : {{form.Mother_Name}}</li> <br>
+        <li class="textfield">Contact Number : {{form.Contact_Number}}</li>
+        <br> 
+        <table style="margin-left: 23%;" class="result3">
+            <thead  >
+                <th >&nbsp&nbsp&nbspSubject Name&nbsp&nbsp&nbsp</th> 
+                <th>&nbsp&nbsp&nbspObtained Marks&nbsp&nbsp&nbsp</th>
+                <th>&nbsp&nbsp&nbspMaximum Marks&nbsp&nbsp</th>
+            </thead>
+            {% for item in list %}
+            <tr>
+               <td>{{ item.0 }}</td>
+               <td>{{ item.1 }}</td>
+               <td>{{ item.2 }}</td>
+            
+                
+            </tr>
+            {%endfor%}
+        </table>
+
+
+    </ul>
+    {% endif %}
+
+</body>
+</html>
